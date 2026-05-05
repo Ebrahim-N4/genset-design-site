@@ -9,7 +9,7 @@ body {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
-                url(diesel ventilation.png) center/cover;
+                url('diesel ventilation.png') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
