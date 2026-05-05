@@ -1,57 +1,98 @@
 body {
     margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
-    background: #f5f7fa;
-    color: #222;
-    line-height: 1.6;
+    background: #0b1220;
+    color: #e5e7eb;
 }
 
-header {
-    background: #0f172a;
-    color: white;
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+                url('https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 60px 20px;
 }
 
-header h1 {
+.hero h1 {
+    font-size: 42px;
     margin: 0;
-    font-size: 36px;
 }
 
-header p {
-    margin-top: 15px;
+.hero p {
     font-size: 18px;
+    margin-top: 15px;
+    opacity: 0.85;
 }
 
-section {
-    background: white;
-    margin: 30px auto;
-    padding: 35px;
-    width: 85%;
-    max-width: 1000px;
+.overlay {
+    max-width: 800px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: #38bdf8;
+    color: #0b1220;
+    font-weight: bold;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-h2 {
-    margin-bottom: 20px;
-    color: #0f172a;
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn.dark {
+    background: #e5e7eb;
+    color: #0b1220;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 60px;
+}
+
+.card {
+    background: #111827;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: #1f2937;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #38bdf8;
+}
+
+/* CONTENT */
+.content {
+    padding: 40px 60px;
+    background: #0f172a;
+}
+
+.content h2 {
+    color: #38bdf8;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
 }
 
 ul {
     padding-left: 20px;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-a {
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    opacity: 0.8;
 }
