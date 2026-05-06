@@ -1,99 +1,78 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0b1220;
-    color: #e5e7eb;
+/* style.css */
+  border-radius: 10px;
+  font-weight: bold;
+  display: inline-block;
 }
 
-/* HERO */
 .hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
-                url('diesel ventilation.png') center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  padding: 80px 0;
+  background: #eef6ff;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: center;
 }
 
 .hero h1 {
-    font-size: 44px;
-    margin-top: 12px;
-    opacity:0.9;
+  font-size: 52px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+.hero h1 span {
+  color: #2563eb;
 }
 
 .hero p {
-    font-size: 18px;
-    margin-top: 15px;
-    opacity: 0.85;
+  font-size: 18px;
+  color: #4b5563;
+  margin-bottom: 28px;
 }
 
-.overlay {
-    max-width: 800px;
+.hero img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-/* BUTTON */
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 28px;
-    background: #38bdf8;
-    color: #0b1220;
-    font-weight: bold;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: 0.3s;
+section {
+  padding: 80px 0;
 }
 
-.btn:hover {
-    transform: translateY(-3px);
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
-.btn.dark {
-    background: #e5e7eb;
-    color: #0b1220;
+.section-title h2 {
+  font-size: 38px;
+  color: #0f172a;
+  margin-bottom: 10px;
 }
 
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    padding: 60px;
+.services-grid,
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
 }
 
-.card {
-    background: #111827;
-    padding: 25px;
-    border-radius: 12px;
-    transition: 0.3s;
+.card,
+.project {
+  background: white;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  border: 1px solid #edf2f7;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    background: #1f2937;
-}
-
-.card h2 {
-    margin-top: 0;
-    color: #38bdf8;
-}
-
-/* CONTENT */
-.content {
-    padding: 40px 60px;
-    background: #0f172a;
-}
-
-.content h2 {
-    color: #38bdf8;
-}
-
-/* CONTACT */
-.contact {
-    text-align: center;
-}
-
-ul {
-    padding-left: 20px;
+footer {
+  background: #f1f5f9;
+  text-align: center;
+  padding: 24px;
+  color: #6b7280;
 }
