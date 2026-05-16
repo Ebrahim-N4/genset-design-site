@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | GENSET Engineering Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">GENSET <span>ENGINEERING STUDIO</span></div>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="services.html" class="active">SERVICES</a>
+    <a href="portfolio.html">PORTFOLIO</a>
+    <a href="about.html">ABOUT</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+  <a href="contact.html" class="btn">REQUEST CONSULTATION</a>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>OUR ENGINEERING SERVICES</h1>
+    <p>
+      Detailed engineering solutions for generator systems, mechanical rooms,
+      fuel systems, ventilation, acoustics, and technical documentation.
+    </p>
+  </div>
+</section>
+
+<section class="services-detail">
+  <div class="container">
+
+    <div class="service-card-detail">
+      <img src="images/design.jpg" alt="Generator Room Design">
+      <div>
+        <h2>Generator Room Design</h2>
+        <p>
+          Layout optimization, equipment arrangement, maintenance clearance,
+          foundation requirements, and compliance with engineering standards.
+        </p>
+        <a href="design-service.html" class="btn">Read More</a>
+      </div>
+    </div>
+
+    <div class="service-card-detail">
+      <img src="images/ventilation.jpg" alt="Ventilation Design">
+      <div>
+        <h2>Ventilation & Heat Load</h2>
+        <p>
+          Fresh air requirements, radiator airflow, exhaust systems,
+          temperature control, and heat rejection calculations.
+        </p>
+        <a href="ventilation-service.html" class="btn">Read More</a>
+      </div>
+    </div>
+
+    <div class="service-card-detail">
+      <img src="images/gas-lines.jpg" alt="Gas Line Design">
+      <div>
+        <h2>Gas Line Design</h2>
+        <p>
+          Natural gas piping sizing, pressure drop calculations,
+          regulator selection, and safety compliance.
+        </p>
+        <a href="gas-service.html" class="btn">Read More</a>
+      </div>
+    </div>
+
+    <div class="service-card-detail">
+      <img src="images/technical-reports.jpg" alt="Technical Reports">
+      <div>
+        <h2>Technical Reports</h2>
+        <p>
+          Engineering reports, BOQ preparation, calculations sheets,
+          technical submittals, and consultant submission documents.
+        </p>
+        <a href="reports-service.html" class="btn">Read More</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-box">
+    <h2>LET'S BUILD RELIABLE POWER TOGETHER</h2>
+    <p>Professional generator engineering services for industrial projects.</p>
+    <a href="contact.html" class="btn">START A PROJECT</a>
+  </div>
+</footer>
+
+</body>
+</html>
