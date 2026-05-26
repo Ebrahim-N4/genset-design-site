@@ -307,6 +307,62 @@
       box-shadow: 0 0 30px rgba(0,173,181,0.35);
     }
 
+    .slider {
+      position: relative;
+      width: 100%;
+      max-height: 420px;
+      overflow: hidden;
+      border-radius: 28px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+    }
+
+    .slide {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: none;
+    }
+
+    .slide.active {
+      display: block;
+      animation: fade 0.5s ease;
+    }
+
+    @keyframes fade {
+      from { opacity: 0.5; }
+      to { opacity: 1; }
+    }
+
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.45);
+      color: white;
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.4rem;
+      transition: 0.3s ease;
+      z-index: 10;
+    }
+
+    .slider-btn:hover {
+      background: #00adb5;
+      color: #081018;
+    }
+
+    .prev {
+      left: 20px;
+    }
+
+    .next {
+      right: 20px;
+    }
+
     footer {
       padding: 25px;
       text-align: center;
@@ -361,7 +417,7 @@
       </div>
 
       <div class="hero-card">
-        <img src="images/Generator room.jpg" alt="Ventilation Simulation" style="width:100%; height:220px; object-fit:cover; border-radius:18px; margin-bottom:25px; border:1px solid rgba(255,255,255,0.08);">
+        <img src="https://images.unsplash.com/photo-1584277261846-c6a1672ed979?q=80&w=1200&auto=format&fit=crop" alt="Ventilation Simulation" style="width:100%; height:220px; object-fit:cover; border-radius:18px; margin-bottom:25px; border:1px solid rgba(255,255,255,0.08);">
 
         <h3>Core Engineering Services</h3>
 
@@ -377,8 +433,18 @@
     </div>
 
     <div class="services">
-      <div style="margin-bottom:70px;">
-        <img src="images/fuel pump.jpg" alt="Diesel Generator" style="width:100%; max-height:420px; object-fit:cover; border-radius:28px; border:1px solid rgba(255,255,255,0.08); box-shadow:0 25px 60px rgba(0,0,0,0.4);">
+      <div style="margin-bottom:70px; position:relative;">
+        <div class="slider">
+          <img class="slide active" src="images/Generator room.jpg" alt="Generator Image 1">
+          <img class="slide" src="images/fuel pump.jpg" alt="Generator Image 2">
+          <img class="slide" src="images/genset canopy.jpg" alt="Generator Image 3">
+          <img class="slide" src="images/hero-generator.png" alt="Generator Image 4">
+          <img class="slide" src="images/room design.jpg" alt="Generator Image 5">
+          <img class="slide" src="images/seismic spring mount.jpg" alt="Generator Image 6">
+          <img class="slide" src="images/vetilation study.png" alt="Generator Image 7">
+          <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+          <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
       </div>
       <h2 class="section-title">Engineering <span>Services</span></h2>
 
@@ -458,5 +524,28 @@
     © 2026 Genset Engineering Solutions. All Rights Reserved.
   </footer>
 
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+
+      if(index >= slides.length) currentSlide = 0;
+      if(index < 0) currentSlide = slides.length - 1;
+
+      slides[currentSlide].classList.add('active');
+    }
+
+    function changeSlide(direction) {
+      currentSlide += direction;
+      showSlide(currentSlide);
+    }
+
+    setInterval(() => {
+      currentSlide++;
+      showSlide(currentSlide);
+    }, 5000);
+  </script>
 </body>
 </html>
